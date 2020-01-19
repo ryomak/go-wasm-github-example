@@ -15,7 +15,7 @@ func main() {
 	done := make(chan bool)
 	go loading(done)
 	title()
-	fetch(done)
+	go fetch(done)
 	select {}
 }
 
